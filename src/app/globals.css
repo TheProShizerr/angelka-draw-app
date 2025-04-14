@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+	--background: #020001;
+	--color: #ffffff;
+	--lineColor: #1f2937;
+	--boxColor: #0f1320;
+	--purpleTextColor: #c084fc;
+	--purpleDarknesColor: #341854;
+	--pink: #dd4793;
+	--textColor: #be9ee1;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-lineColor: var(--lineColor);
+	--color-boxColor: var(--boxColor);
+	--color-purpleTextColor: var(--purpleTextColor);
+	--color-purpleDarknesColor: var(--purpleDarknesColor);
+	--color-pink: var(--pink);
+	--color-textColor: var(--textColor);
+}
+
+@plugin 'tailwind-scrollbar' {
+	nocompatible: true;
+}
+
+body {
+	background: var(--background);
+	color: var(--color);
+	font-family: Arial, Helvetica, sans-serif;
+}
