@@ -10,9 +10,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			async authorize(credentials) {
 				const user = { name: process.env.LOGIN }
 
-				if (credentials.login !== process.env.LOGIN && credentials.password !== process.env.PASSWORD) return null
-
-				console.log(credentials)
+				if (credentials.login !== process.env.LOGIN || credentials.password !== process.env.PASSWORD) return null
 
 				return user
 			},

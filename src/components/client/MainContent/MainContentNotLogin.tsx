@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from "react"
 
 export default function MainContentNotLogin({ setPopup, popup }: { setPopup: Dispatch<SetStateAction<boolean>>; popup: boolean }) {
 	return (
-		<div className="flex flex-col items-center justify-center z-0 max-md:mt-15">
+		<div className="flex flex-col items-center justify-center z-0 ">
 			<div className="flex items-center justify-center w-25 h-25 bg-purpleDarknesColor/40 rounded-full max-md:w-15 max-md:h-15">
 				<Gamepad2 className="text-purpleTextColor w-12 h-12 max-md:w-6 max-md:h-6" />
 			</div>

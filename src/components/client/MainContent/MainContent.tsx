@@ -33,9 +33,12 @@ export default function MainContent() {
 				<div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900/70 to-transparent" />
 				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.9)_100%)]" />
 			</div>
-			<div className="flex justify-center items-center w-full h-screen">
-				<div className="absolute bottom-5  transition-all flex items-center justify-center w-full ">
-					<div className={`flex items-center gap-5 max-lg:flex-col transition-all ${!session && "opacity-5"}`}>
+			<div className="flex max-md:flex-col justify-center items-center w-full h-screen">
+				{popup && <MainContentLoginPopup />}
+				{!session && <MainContentNotLogin setPopup={setPopup} popup={popup} />}
+				{session && <MainContentDraw />}
+				<div className="absolute bottom-5  transition-all flex items-center justify-center w-full max-md:static max-md:mt-10">
+					<div className={`flex items-center gap-5 max-lg:flex-col transition-all ${!session && "opacity-10"}`}>
 						<Image src={FirstSposnor} alt="logo g4skins" className="w-62 opacity-50" />
 						<Image src={SeconsSponsor} alt="logo g4skins" className="w-62 opacity-50" />
 						<Image src={ThirdSponsor} alt="logo g4skins" className="w-62 opacity-50" />
@@ -44,10 +47,6 @@ export default function MainContent() {
 				<div className="absolute top-3 right-3">
 					<p className="opacity-20 text-sm">By TheProShizer & nejtcs</p>
 				</div>
-
-				{popup && <MainContentLoginPopup />}
-				{!session && <MainContentNotLogin setPopup={setPopup} popup={popup} />}
-				{session && <MainContentDraw />}
 			</div>
 		</>
 	)

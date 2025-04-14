@@ -83,10 +83,10 @@ export default function MainContentDraw() {
 
 	return (
 		<>
-			<div className="relative">
-				<div className="absolute left-1/2 top-1/2 -translate-1/2 w-[35rem] h-[30rem] bg-purpleDarknesColor/60 blur-[200px]  z-0"></div>
-				<div className="relative w-[40rem]">
-					<div className="flex justify-center items-center gap-5 w-full px-3">
+			<div className="relative max-md:w-full max-md:flex max-md:justify-center max-md:z-50">
+				<div className="absolute left-1/2 top-1/2 -translate-1/2 w-[35rem] h-[30rem] bg-purpleDarknesColor/60 blur-[250px]   z-0"></div>
+				<div className="relative w-[40rem] max-md:w-11/12">
+					<div className="flex justify-center items-center gap-5 w-full px-3 max-md:grow max-md:col-rows-2">
 						<div className="flex items-center gap-3 bg-boxColor border border-purple-900/50 rounded-xl p-3 flex-grow  opacity-90 w-96">
 							<div className="bg-purple-900/30 p-3 rounded-lg w-fit">
 								<Users className="text-purpleTextColor w-6 h-6" />

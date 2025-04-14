@@ -77,7 +77,10 @@ export default function Sidebar() {
 	}, [session, status])
 
 	return (
-		<div className={`flex flex-col bg-boxColor transition-all ${hidden ? "w-14" : "w-85"} h-screen shrink-0 max-md:absolute max-md:z-30  border-r border-purpleDarknesColor relative`}>
+		<div
+			className={`flex flex-col bg-boxColor transition-all ${
+				hidden ? "w-14" : "w-85"
+			} h-screen shrink-0 max-md:absolute max-md:z-30  border-r border-purpleDarknesColor relative max-md:w-0 max-md:overflow-hidden`}>
 			<button
 				className="absolute -right-5 top-1/2 -translate-y-1/2 z-20 bg-boxColor/80 hover:bg-boxColor  flex items-center justify-center w-9 h-9 border border-purpleDarknesColor rounded-full  cursor-pointer"
 				onClick={() => setHidden(!hidden)}>
